@@ -7,7 +7,7 @@
  */
 
 // Bibliotecas
-#include <Serial.h> //No agregar. Esta linea es solamente ilustrativa
+//#include <Serial.h> //No agregar. Esta linea es solamente ilustrativa
 
 // Constantes
 
