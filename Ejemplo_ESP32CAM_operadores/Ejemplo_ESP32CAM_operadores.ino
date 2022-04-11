@@ -1,15 +1,13 @@
 /*
- * Ejemplo de operador módulo
+ * Ejemplo modulo
  * Por: Hugo Vargas
- * Fecha: 8 de abril de 2022
+ * Fecha: 11 de abril del 2022
  * 
- * Este es un programa para ejemplificar el uso básico del legunage C
- * y el microcontrolador ESP32CAM.
- * 
+ * Este programa tiene como proposito ejemplificar el uso del operador modulo
  */
 
 // Bibliotecas
-#include <Serial.h>
+#include <Serial.h> //No agregar. Esta linea es solamente ilustrativa
 
 // Constantes
 
@@ -21,26 +19,28 @@ int dato = 0;
 // Condiciones iniciales - Se ejecuta sólo una vez al energizar
 void setup() {// Inicio de void setup ()
   // Aquí va tu código
-  Serial.begin (115200);  //Inicializacion del monitor serial
-  Serial.println ("Conexion inicada"); //Mensaje de prueba
-  delay (1000); //Espera
-
+  Serial.begin (115200); // Iniciar comunicacion serial
+  Serial.println ("Se ha iniciado la comunicacion serial"); //Mensaje a enviar
+  delay (5000);
 }// Fin de void setup
 
 // Cuerpo del programa - Se ejecuta constamente
 void loop() {// Inicio de void loop
   // put your main code here, to run repeatedly:
+  
+  // dato = dato + 1; //Forma alternativa
   dato++;
-  //to = dato + 1;
 
+  //Contador de anillo con comparaciones
   if (dato > 8) {
     dato = 0;
   }
 
-  dato %= 8;
+  //Contador de anillo con operador
+  // dato %= 8;
 
-  Serial.println (dato);
-  delay (1000); //Espera
+  Serial.println (dato); //Muestra en monitor serial el valor de la variable
+  delay (1000);
 
 }// Fin de void loop
 
