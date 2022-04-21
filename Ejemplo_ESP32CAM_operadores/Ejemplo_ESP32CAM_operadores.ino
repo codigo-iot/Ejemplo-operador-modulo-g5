@@ -46,7 +46,8 @@ void loop() {// Inicio de void loop
   Serial.print ("Con comparaciones ");
   Serial.println (timeFinish - timeStart); //Mandar al monitor serial la diferencia entre variables de tiempo
   delay (10000);
-
+  
+  dato = 0;
   timeStart = micros ();
   
   //Ejecutar ciclio n veces
